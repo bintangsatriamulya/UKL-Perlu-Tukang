@@ -1,0 +1,9 @@
+flutter_native_splash:
+  color: "#ffffff"
+  image: assets/perlutukang.jpg
+
+  android_12:
+    color: "#ffffff"
+    image: assets/perlutukang.jpg
+
+  web: false
