@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:perlutukang/artikel.dart';
 import 'package:perlutukang/pages/containerjasa.dart';
 import 'package:perlutukang/pages/profile.dart';
 import 'package:perlutukang/pages/transaksi.dart';
@@ -52,6 +53,7 @@ class HomePage extends StatelessWidget {
             child: Column(
               children: [
                 Container(
+                   color: Colors.grey,
                   width: 800,
                   height: 200,
                   child: ListView(
@@ -97,6 +99,7 @@ class HomePage extends StatelessWidget {
                 Container(
                   width: 800,
                   height: 100,
+                   color: Colors.grey,
                   child: Container(
                     child: Center(
                       child: Container(
@@ -152,13 +155,14 @@ class HomePage extends StatelessWidget {
                 Container(
                   width: 800,
                   height: 300,
+                  color: Colors.grey,
                   child: Center(
                     child: Container(
                       height: 250,
                       width: 500,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(12),
-                          color: Colors.white,
+                          color: const Color.fromARGB(255, 238, 197, 245),
                           boxShadow: [
                             BoxShadow(
                               color: Colors.grey.withOpacity(0.0),
@@ -254,8 +258,10 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                 ),
-                const SizedBox(height: 2),
+                const SizedBox(height: 25),
                 Container(
+                   color: Colors.grey,
+                  child: Container(
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(12),
                       color: Colors.white,
@@ -302,11 +308,58 @@ class HomePage extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(
-                  height: 25,
-                ),
-
                 
+                ),
+          const SizedBox(
+                  height: 25,),
+
+
+                Container(
+                   color: Colors.grey,
+                  child: Container(
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: Colors.white,
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.0),
+                          spreadRadius: 3,
+                          blurRadius: 5,
+                          offset: const Offset(0, 0),
+                        )
+                      ]),
+                  margin: const EdgeInsets.symmetric(vertical: 10),
+                  //SET THE WIDTH
+                  width: MediaQuery.of(context).size.width,
+
+                  child: const Column(
+                     mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+
+                    children: [
+                      Text(
+                        "Artikel Terbaru",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 24),
+                      ),
+                      SizedBox(height: 18),
+                      Column(
+                        children: [
+                          ArtikelNews(
+                            title: 'Update Aplikasi Perlu Tukang', 
+                            imageAsset: 'assets/ayaka.jpg'),
+                            ArtikelNews(
+                            title: 'Update Aplikasi perlu Tukang Untuk Mitra', 
+                            imageAsset: 'assets/furina2.jpg'),
+                            ArtikelNews(
+                            title: 'Update Aplikasi perlu Tukang Untuk Konsumen', 
+                            imageAsset: 'assets/furina1.png')
+                        ],
+                      )
+                    ],
+                  ),
+                ),
+                )
               ],
             ),
           ),

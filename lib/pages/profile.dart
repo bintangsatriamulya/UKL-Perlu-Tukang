@@ -50,7 +50,8 @@ class Profile extends StatelessWidget {
         body: SingleChildScrollView(
           padding: EdgeInsets.all(16),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
               UserInfo(),
               ..._Buttons(),
@@ -170,7 +171,7 @@ class _Button extends StatelessWidget {
     return TextButton(
       onPressed: onPressed,
       child: Container(
-        width: 600000,
+        width: MediaQuery.of(context).size.width,
         height: 50,
         decoration: BoxDecoration(
         

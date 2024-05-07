@@ -24,15 +24,20 @@ class ArtikelNews extends StatelessWidget {
         color: Colors.white,
       ),
       child:Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+         
         children: [
+          
+    
             Image.asset(
               imageAsset,
-              width: double.infinity,
-              fit: BoxFit.cover,
+              fit: BoxFit.fill,
+
             ),
             SizedBox(height: 5,),
             Text(title,
-            style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),
+            style: TextStyle(fontWeight: FontWeight.bold,fontSize: 16),
             ),
         ],
       ) ,
