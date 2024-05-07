@@ -10,13 +10,13 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.grey[300], // Background color set to white
+          appBar: AppBar(
+          backgroundColor: Colors.grey[500], // Background color set to white
           elevation: 10,
           title: Container(
             padding: const EdgeInsets.symmetric(horizontal: 10),
             decoration: BoxDecoration(
-              color: Colors.grey[300], // Background color set to light grey
+              color: Colors.grey[200], // Background color set to light grey
               borderRadius: BorderRadius.circular(30),
             ),
             child: const Row(
@@ -44,7 +44,7 @@ class HomePage extends StatelessWidget {
             IconButton(
               onPressed: () {},
               icon: const Icon(Icons.notifications,
-                  color: Colors.grey), // Icon color set to grey
+                  color: Colors.white), // Icon color set to grey
             ),
           ],
         ),
@@ -96,6 +96,8 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 15),
+
+
                 Container(
                   width: 800,
                   height: 100,
@@ -259,8 +261,11 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 25),
+
+
                 Container(
                    color: Colors.grey,
+                   height: 300,
                   child: Container(
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(12),
@@ -311,14 +316,15 @@ class HomePage extends StatelessWidget {
                 
                 ),
           const SizedBox(
-                  height: 25,),
+                  height: 15,),
 
 
                 Container(
                    color: Colors.grey,
+                   height: 1000,
                   child: Container(
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
+                      borderRadius: BorderRadius.circular(20),
                       color: Colors.white,
                       boxShadow: [
                         BoxShadow(

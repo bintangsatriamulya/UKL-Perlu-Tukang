@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:perlutukang/pages/homepage.dart';
 import 'package:perlutukang/pages/transaksi.dart';
-import 'package:perlutukang/pages/userinfo.dart';
 
 class Profile extends StatelessWidget {
   const Profile({super.key});
@@ -10,10 +9,10 @@ class Profile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.grey[300], // Background color set to white
+          backgroundColor: Colors.grey[500], // Background color set to white
           elevation: 10,
           title: Container(
-            padding: EdgeInsets.symmetric(horizontal: 10),
+            padding: const EdgeInsets.symmetric(horizontal: 10),
             decoration: BoxDecoration(
               color: Colors.grey[200], // Background color set to light grey
               borderRadius: BorderRadius.circular(30),
@@ -42,21 +41,59 @@ class Profile extends StatelessWidget {
           actions: [
             IconButton(
               onPressed: () {},
-              icon: Icon(Icons.notifications,
-                  color: Colors.grey), // Icon color set to grey
+              icon: const Icon(Icons.notifications,
+                  color: Colors.white), // Icon color set to grey
             ),
           ],
         ),
         body: SingleChildScrollView(
-          padding: EdgeInsets.all(16),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              UserInfo(),
-              ..._Buttons(),
-            ],
-          ),
+          child:  Container(
+              padding: const EdgeInsets.all(16),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.withOpacity(0.2),
+                    spreadRadius: 5,
+                    blurRadius: 7,
+                    offset: const Offset(0, 3),
+                  ),
+                ],
+              ),
+              child: Row(
+               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+               children: [
+                 const CircleAvatar(
+                   radius: 35,
+                   backgroundColor: Colors.transparent,
+                   backgroundImage: AssetImage('assets/NILOU.jpg'),
+                 ),
+                 const Column(
+                   crossAxisAlignment: CrossAxisAlignment.start,
+                   mainAxisAlignment: MainAxisAlignment.start,
+                   children: [
+                     Text(
+                       'Bintang Satria Mulya Budi',
+                       style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                     ),
+                     SizedBox(height: 8),
+                     Text(
+                       'bintangsatriamulya88@gmail.com',
+                       style: TextStyle(fontWeight: FontWeight.normal, fontSize: 14),
+                     ),
+                     Text(
+                       '+628888337777',
+                       style: TextStyle(fontWeight: FontWeight.normal, fontSize: 14),
+                     ),
+                   ],
+                 ),
+                 ElevatedButton(
+                   onPressed: (){},
+                   child: const Text('Edit'),
+                 ),
+               ],
+                  ),
+            ),
         ),
         bottomNavigationBar: BottomAppBar(
           child: Row(
@@ -69,12 +106,12 @@ class Profile extends StatelessWidget {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => HomePage()),
+                        MaterialPageRoute(builder: (context) => const HomePage()),
                       );
                     },
-                    icon: Icon(Icons.home),
+                    icon: const Icon(Icons.home),
                   ),
-                  Text('Beranda'), // Tambahkan teks sebagai subtitle
+                  const Text('Beranda'), // Tambahkan teks sebagai subtitle
                 ],
               ),
               // Tambahkan IconButton dan teks untuk setiap item di BottomAppBar
@@ -88,9 +125,9 @@ class Profile extends StatelessWidget {
                         MaterialPageRoute(builder: (context) => Transaksi()),
                       );
                     },
-                    icon: Icon(Icons.history),
+                    icon: const Icon(Icons.history),
                   ),
-                  Text('Transaksi'),
+                  const Text('Transaksi'),
                 ],
               ),
               Column(
@@ -103,9 +140,9 @@ class Profile extends StatelessWidget {
                         MaterialPageRoute(builder: (context) => Transaksi()),
                       );
                     },
-                    icon: Icon(Icons.store),
+                    icon: const Icon(Icons.store),
                   ),
-                  Text('Daftar Tukang'),
+                  const Text('Daftar Tukang'),
                 ],
               ),
               Column(
@@ -118,9 +155,9 @@ class Profile extends StatelessWidget {
                         MaterialPageRoute(builder: (context) => Transaksi()),
                       );
                     },
-                    icon: Icon(Icons.wallet_outlined),
+                    icon: const Icon(Icons.wallet_outlined),
                   ),
-                  Text('Isi Saldo'),
+                  const Text('Isi Saldo'),
                 ],
               ),
               Column(
@@ -130,12 +167,12 @@ class Profile extends StatelessWidget {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => Profile()),
+                        MaterialPageRoute(builder: (context) => const Profile()),
                       );
                     },
-                    icon: Icon(Icons.person_2),
+                    icon: const Icon(Icons.person_2),
                   ),
-                  Text('Akun'),
+                  const Text('Akun'),
                 ],
               ),
             ],
@@ -144,49 +181,3 @@ class Profile extends StatelessWidget {
   }
 }
 
-List<Widget> _Buttons() {
-  return [
-    SizedBox(height: 10),
-    _Button('Ubah Password', Icons.lock, () {}),
-    SizedBox(height: 10),
-    _Button('Ketentuan Layanan', Icons.chat, () {}),
-    SizedBox(height: 10),
-    _Button('Kebijakan Privasi', Icons.privacy_tip, () {}),
-    SizedBox(height: 10),
-    _Button('WhatsApp Admin', Icons.chat_rounded, () {}),
-    _Button('Keluar', Icons.logout, () {}),
-    _Button('Version V 1.3.6', Icons.info, () {})
-  ];
-}
-
-class _Button extends StatelessWidget {
-  final String text;
-  final IconData icon;
-  final VoidCallback onPressed;
-
-  _Button(this.text, this.icon, this.onPressed);
-
-  @override
-  Widget build(BuildContext context) {
-    return TextButton(
-      onPressed: onPressed,
-      child: Container(
-        width: MediaQuery.of(context).size.width,
-        height: 50,
-        decoration: BoxDecoration(
-        
-          color: Colors.grey[200],
-      borderRadius: BorderRadius.circular(5),
-        ),
-        child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Icon(icon),
-          SizedBox(width: 5),
-          Text(text),
-        ],
-      ),
-      )
-    );
-  }
-}

@@ -28,11 +28,11 @@ class Transaksi extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.grey[800], // Background color set to white
+         appBar: AppBar(
+          backgroundColor: Colors.grey[500], // Background color set to white
           elevation: 10,
           title: Container(
-            padding: EdgeInsets.symmetric(horizontal: 10),
+            padding: const EdgeInsets.symmetric(horizontal: 10),
             decoration: BoxDecoration(
               color: Colors.grey[200], // Background color set to light grey
               borderRadius: BorderRadius.circular(30),
@@ -61,8 +61,8 @@ class Transaksi extends StatelessWidget {
           actions: [
             IconButton(
               onPressed: () {},
-              icon: Icon(Icons.notifications,
-                  color: Colors.grey), // Icon color set to grey
+              icon: const Icon(Icons.notifications,
+                  color: Colors.white), // Icon color set to grey
             ),
           ],
         ),
