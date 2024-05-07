@@ -8,19 +8,22 @@ class Transaksi extends StatelessWidget {
       'image': 'assets/ayaka.jpg',
       'label': 'Kamisato Ayaka',
       'times': '5/6/2024 10.30',
-      'inpo': 'Inazuma'
+      'inpo': 'Inazuma',
+      'in': '| Menunngu Konfirmasi'
     },
     {
       'image': 'assets/klee.jpg',
       'label': 'Klee',
       'times': '5/6/2024 10.30',
-      'inpo': 'Monstadts'
+      'inpo': 'Monstadts',
+      'in': '| Sudah diKonfirmasi'
     },
     {
       'image': 'assets/NILOU.jpg',
       'label': 'Nilou',
       'times': '5/6/2024 10.30',
-      'inpo': 'Sumeru City'
+      'inpo': 'Sumeru City',
+      'in': '| Menunngu Konfirmasi'
     },
     // Tambahkan lebih banyak item jika diperlukan
   ];
@@ -28,7 +31,7 @@ class Transaksi extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-         appBar: AppBar(
+        appBar: AppBar(
           backgroundColor: Colors.grey[500], // Background color set to white
           elevation: 10,
           title: Container(
@@ -73,7 +76,6 @@ class Transaksi extends StatelessWidget {
               elevation: 3,
               color: Colors.grey[100],
               child: ListTile(
-                
                 leading: CircleAvatar(
                   radius: 25,
                   backgroundImage: AssetImage(items[index]['image']!),
@@ -83,8 +85,16 @@ class Transaksi extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(items[index]['times']!),
-                    SizedBox(height: 5,),
-                    Text(items[index]['inpo']!),
+                    SizedBox(
+                      height: 5,
+                    ),
+                    Row(
+                      children: [
+                        Text(items[index]['inpo']!),
+                        SizedBox(width: 10,),
+                        Text(items[index]['in']!,style: TextStyle(color: Colors.amber),),
+                      ],
+                    ),
                   ],
                 ),
               ),
