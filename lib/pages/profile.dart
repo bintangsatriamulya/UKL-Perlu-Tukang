@@ -169,7 +169,15 @@ class _Button extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextButton(
       onPressed: onPressed,
-      child: Row(
+      child: Container(
+        width: 600000,
+        height: 50,
+        decoration: BoxDecoration(
+        
+          color: Colors.grey[200],
+      borderRadius: BorderRadius.circular(5),
+        ),
+        child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Icon(icon),
@@ -177,6 +185,7 @@ class _Button extends StatelessWidget {
           Text(text),
         ],
       ),
+      )
     );
   }
 }

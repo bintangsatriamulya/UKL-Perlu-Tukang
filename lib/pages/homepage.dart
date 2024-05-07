@@ -260,50 +260,27 @@ class HomePage extends StatelessWidget {
                   width: 800,
                   height: 500,
                   child: Container(
-                    height: 500,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        color: Colors.white,
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.grey.withOpacity(0.0),
-                            spreadRadius: 3,
-                            blurRadius: 5,
-                          )
-                        ]),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const Padding(
-                          padding: EdgeInsets.only(
-                              left: 15,
-                              top: 15), // Add padding only to the left side
-                          child: Text(
-                            'Penyedia jasa Terdekat',
-                            style: TextStyle(
-                                fontSize: 20, fontWeight: FontWeight.bold),
-                          ),
-                        ),
-
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Expanded(
-                                child: Container(
-                                  decoration:BoxDecoration(
-
-                                  ),
-                                  child: Container(
-
-                                  ),
-                                ),
+                      height: 500,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          color: Colors.white,
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.grey.withOpacity(0.0),
+                              spreadRadius: 3,
+                              blurRadius: 5,
                             )
+                          ]),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                          children: [
+                            
+                            
+                           // Add padding only to the left side
+                             
                           ],
-                        )
-                      ],
-                    ),
-                  ),
+                        ),
+                      ),
                 ),
               ],
             ),

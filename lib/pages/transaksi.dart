@@ -29,7 +29,7 @@ class Transaksi extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.grey[300], // Background color set to white
+          backgroundColor: Colors.grey[800], // Background color set to white
           elevation: 10,
           title: Container(
             padding: EdgeInsets.symmetric(horizontal: 10),

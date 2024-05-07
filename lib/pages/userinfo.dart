@@ -9,10 +9,11 @@ class UserInfo extends StatelessWidget {
   elevation: 3, // Tambahkan nilai elevasi di sini
   borderRadius: BorderRadius.circular(10), // Border radius juga harus diterapkan di Material
   child: Container(
-    padding: EdgeInsets.all(15),
+    width: 500,
+    padding: EdgeInsets.all(5),
     decoration: BoxDecoration(
       color: Colors.white,
-      borderRadius: BorderRadius.circular(10),
+      borderRadius: BorderRadius.circular(8),
     ),
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
