@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:perlutukang/pages/containerjasa.dart';
 import 'package:perlutukang/pages/profile.dart';
 import 'package:perlutukang/pages/transaksi.dart';
 
@@ -12,7 +13,7 @@ class HomePage extends StatelessWidget {
           backgroundColor: Colors.grey[300], // Background color set to white
           elevation: 10,
           title: Container(
-            padding: EdgeInsets.symmetric(horizontal: 10),
+            padding: const EdgeInsets.symmetric(horizontal: 10),
             decoration: BoxDecoration(
               color: Colors.grey[300], // Background color set to light grey
               borderRadius: BorderRadius.circular(30),
@@ -41,7 +42,7 @@ class HomePage extends StatelessWidget {
           actions: [
             IconButton(
               onPressed: () {},
-              icon: Icon(Icons.notifications,
+              icon: const Icon(Icons.notifications,
                   color: Colors.grey), // Icon color set to grey
             ),
           ],
@@ -58,10 +59,10 @@ class HomePage extends StatelessWidget {
                     children: <Widget>[
                       Container(
                         width: 300,
-                        margin: EdgeInsets.all(8),
+                        margin: const EdgeInsets.all(8),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(25),
-                          image: DecorationImage(
+                          image: const DecorationImage(
                             image: AssetImage("assets/furina1.png"),
                             fit: BoxFit.cover,
                           ),
@@ -69,10 +70,10 @@ class HomePage extends StatelessWidget {
                       ),
                       Container(
                         width: 300,
-                        margin: EdgeInsets.all(8),
+                        margin: const EdgeInsets.all(8),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(15),
-                          image: DecorationImage(
+                          image: const DecorationImage(
                             image: AssetImage("assets/furina2.jpg"),
                             fit: BoxFit.cover,
                           ),
@@ -80,10 +81,10 @@ class HomePage extends StatelessWidget {
                       ),
                       Container(
                         width: 300,
-                        margin: EdgeInsets.all(8),
+                        margin: const EdgeInsets.all(8),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(15),
-                          image: DecorationImage(
+                          image: const DecorationImage(
                             image: AssetImage("assets/furina3.png"),
                             fit: BoxFit.cover,
                           ),
@@ -92,7 +93,7 @@ class HomePage extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(height: 15),
+                const SizedBox(height: 15),
                 Container(
                   width: 800,
                   height: 100,
@@ -108,12 +109,12 @@ class HomePage extends StatelessWidget {
                               color: Colors.grey.withOpacity(0.2),
                               spreadRadius: 5,
                               blurRadius: 7,
-                              offset: Offset(0, 3),
+                              offset: const Offset(0, 3),
                             ),
                           ],
                           borderRadius: BorderRadius.circular(20),
                         ),
-                        child: Row(
+                        child: const Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             Icon(
@@ -147,141 +148,165 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(height: 4),
+                const SizedBox(height: 4),
                 Container(
                   width: 800,
                   height: 300,
-                  child: Container(
-                    child: Center(
-                      child: Container(
-                        height: 250,
-                        width: 500,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(12),
-                            color: Colors.white,
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.grey.withOpacity(0.0),
-                                spreadRadius: 3,
-                                blurRadius: 5,
-                                offset: Offset(0, 0),
-                              )
-                            ]),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            SizedBox(height: 15),
-                            Text(
-                              "Kategori Jasa",
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 30,
-                              ),
-                            ),
-                            SizedBox(height: 6),
-                            Text(
-                              "Temukan kebutuhan servicemu dibawah \n ini sesuai yang kamu butuhkan",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                fontWeight: FontWeight.normal,
-                                fontSize: 13,
-                              ),
-                            ),
-                            SizedBox(height: 16),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              children: [
-                                Image.asset(
-                                  'assets/Frame3.png',
-                                  width: 50,
-                                  height: 50,
-                                ),
-                                Image.asset(
-                                  'assets/Frame4.png',
-                                  width: 50,
-                                  height: 50,
-                                ),
-                                Image.asset(
-                                  'assets/Fram5.png',
-                                  width: 50,
-                                  height: 50,
-                                ),
-                                Image.asset(
-                                  'assets/Frame6.png',
-                                  width: 50,
-                                  height: 50,
-                                ),
-                                Image.asset(
-                                  'assets/Frame57.png',
-                                  width: 75,
-                                  height: 75,
-                                ),
-                              ],
-                            ),
-                            SizedBox(height: 4),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              children: [
-                                Text('Service\n AC',
-                                    style: TextStyle(
-                                        fontSize: 10,
-                                        fontWeight: FontWeight.bold),
-                                    textAlign: TextAlign.center),
-                                Text('Service\n Cat',
-                                    style: TextStyle(
-                                        fontSize: 10,
-                                        fontWeight: FontWeight.bold),
-                                    textAlign: TextAlign.center),
-                                Text('Service \nCCTV',
-                                    style: TextStyle(
-                                        fontSize: 10,
-                                        fontWeight: FontWeight.bold),
-                                    textAlign: TextAlign.center),
-                                Text('Service\n Bangunan',
-                                    style: TextStyle(
-                                        fontSize: 10,
-                                        fontWeight: FontWeight.bold),
-                                    textAlign: TextAlign.center),
-                                Text('Service\n Derek',
-                                    style: TextStyle(
-                                        fontSize: 10,
-                                        fontWeight: FontWeight.bold),
-                                    textAlign: TextAlign.center),
-                              ],
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-                SizedBox(height: 2),
-                Container(
-                  width: 800,
-                  height: 500,
-                  child: Container(
-                      height: 500,
+                  child: Center(
+                    child: Container(
+                      height: 250,
+                      width: 500,
                       decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
+                          borderRadius: BorderRadius.circular(12),
                           color: Colors.white,
                           boxShadow: [
                             BoxShadow(
                               color: Colors.grey.withOpacity(0.0),
                               spreadRadius: 3,
                               blurRadius: 5,
+                              offset: const Offset(0, 0),
                             )
                           ]),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          const SizedBox(height: 15),
+                          const Text(
+                            "Kategori Jasa",
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 30,
+                            ),
+                          ),
+                          const SizedBox(height: 6),
+                          const Text(
+                            "Temukan kebutuhan servicemu dibawah \n ini sesuai yang kamu butuhkan",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontWeight: FontWeight.normal,
+                              fontSize: 13,
+                            ),
+                          ),
+                          const SizedBox(height: 16),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              Image.asset(
+                                'assets/Frame3.png',
+                                width: 50,
+                                height: 50,
+                              ),
+                              Image.asset(
+                                'assets/Frame4.png',
+                                width: 50,
+                                height: 50,
+                              ),
+                              Image.asset(
+                                'assets/Fram5.png',
+                                width: 50,
+                                height: 50,
+                              ),
+                              Image.asset(
+                                'assets/Frame6.png',
+                                width: 50,
+                                height: 50,
+                              ),
+                              Image.asset(
+                                'assets/Frame57.png',
+                                width: 75,
+                                height: 75,
+                              ),
+                            ],
+                          ),
+                          const SizedBox(height: 4),
+                          const Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              Text('Service\n AC',
+                                  style: TextStyle(
+                                      fontSize: 10,
+                                      fontWeight: FontWeight.bold),
+                                  textAlign: TextAlign.center),
+                              Text('Service\n Cat',
+                                  style: TextStyle(
+                                      fontSize: 10,
+                                      fontWeight: FontWeight.bold),
+                                  textAlign: TextAlign.center),
+                              Text('Service \nCCTV',
+                                  style: TextStyle(
+                                      fontSize: 10,
+                                      fontWeight: FontWeight.bold),
+                                  textAlign: TextAlign.center),
+                              Text('Service\n Bangunan',
+                                  style: TextStyle(
+                                      fontSize: 10,
+                                      fontWeight: FontWeight.bold),
+                                  textAlign: TextAlign.center),
+                              Text('Service\n Derek',
+                                  style: TextStyle(
+                                      fontSize: 10,
+                                      fontWeight: FontWeight.bold),
+                                  textAlign: TextAlign.center),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 2),
+                Container(
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(12),
+                      color: Colors.white,
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.0),
+                          spreadRadius: 3,
+                          blurRadius: 5,
+                          offset: const Offset(0, 0),
+                        )
+                      ]),
+                  child: const Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Text(
+                        "Penyedia Jasa Terdekat",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 24),
+                      ),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        child: Row(
                           children: [
-                            
-                            
-                           // Add padding only to the left side
-                             
+                            JasaTerdekat(
+                              placeName: 'TOKO PERABOTAN',
+                              address: 'Jalan Raya Soekarno Hatta',
+                            ),
+                            JasaTerdekat(
+                              placeName: 'TOKO UKL',
+                              address: 'Tetap Semagat dan Jangan Menyerah!!',
+                            ),
+                            JasaTerdekat(
+                              placeName: 'KEDAI TOK DALANG',
+                              address: 'Kampung Durian Runtuh Malaysia',
+                            ),
                           ],
                         ),
                       ),
+                    ],
+                  ),
                 ),
+                SizedBox(
+                  height: 25,
+                ),
+
+                
               ],
             ),
           ),
@@ -303,7 +328,7 @@ class HomePage extends StatelessWidget {
                     },
                     icon: const Icon(Icons.home),
                   ),
-                  Text('Beranda'), // Tambahkan teks sebagai subtitle
+                  const Text('Beranda'), // Tambahkan teks sebagai subtitle
                 ],
               ),
               // Tambahkan IconButton dan teks untuk setiap item di BottomAppBar
@@ -317,9 +342,9 @@ class HomePage extends StatelessWidget {
                         MaterialPageRoute(builder: (context) => Transaksi()),
                       );
                     },
-                    icon: Icon(Icons.history),
+                    icon: const Icon(Icons.history),
                   ),
-                  Text('Transaksi'),
+                  const Text('Transaksi'),
                 ],
               ),
               Column(
@@ -332,9 +357,9 @@ class HomePage extends StatelessWidget {
                         MaterialPageRoute(builder: (context) => Transaksi()),
                       );
                     },
-                    icon: Icon(Icons.store),
+                    icon: const Icon(Icons.store),
                   ),
-                  Text('Daftar Tukang'),
+                  const Text('Daftar Tukang'),
                 ],
               ),
               Column(
@@ -347,9 +372,9 @@ class HomePage extends StatelessWidget {
                         MaterialPageRoute(builder: (context) => Transaksi()),
                       );
                     },
-                    icon: Icon(Icons.wallet_outlined),
+                    icon: const Icon(Icons.wallet_outlined),
                   ),
-                  Text('Isi Saldo'),
+                  const Text('Isi Saldo'),
                 ],
               ),
               Column(
@@ -359,12 +384,13 @@ class HomePage extends StatelessWidget {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => Profile()),
+                        MaterialPageRoute(
+                            builder: (context) => const Profile()),
                       );
                     },
-                    icon: Icon(Icons.person_2),
+                    icon: const Icon(Icons.person_2),
                   ),
-                  Text('Akun'),
+                  const Text('Akun'),
                 ],
               ),
             ],
