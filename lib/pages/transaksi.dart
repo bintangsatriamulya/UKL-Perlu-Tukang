@@ -90,7 +90,7 @@ class Transaksi extends StatelessWidget {
                     ),
                     Row(
                       children: [
-                        Text(items[index]['inpo']!),
+                        Text(items[index]['inpo']!,style: TextStyle(color: Colors.blue),),
                         SizedBox(width: 10,),
                         Text(items[index]['in']!,style: TextStyle(color: Colors.amber),),
                       ],
